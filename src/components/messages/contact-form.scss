@@ -1,0 +1,26 @@
+.contact-form-container {
+    
+    h2 {
+        margin-bottom: 4rem;
+    }
+    
+
+    input,
+    textarea {
+        border: 0;
+        border-bottom: 1px solid ;
+       
+        
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: rgba(113, 141, 180, 0.981);
+    }
+
+    .input-group-text {
+        border: 0;
+        background: none;
+        color: rgb(98, 78, 78);
+    }
+}
