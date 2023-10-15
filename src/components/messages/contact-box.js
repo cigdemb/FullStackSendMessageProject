@@ -1,7 +1,8 @@
 import React from 'react'
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./contact-box.scss";
 import ContactForm from './contact-form';
+import AllMessages from './all-messages';
 
 const ContactBox = () => {
     return (
@@ -16,7 +17,16 @@ const ContactBox = () => {
                         </Row>
                     </Card.Body>
                 </Card>
-            </Container>           
+            </Container>  
+            <Container>
+                          
+                          <Button className='mt-5'
+                                onClick={() =>{
+                                    <AllMessages/>
+                                }}>  All Messages                
+                                    
+                            </Button>
+                          </Container>         
         </div>
     );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import * as Yup from "yup";
 import { useFormik } from 'formik';
-import { Button, Col, Form, InputGroup, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, Form, InputGroup, Row } from 'react-bootstrap';
 import { FiMail, FiMessageSquare, FiSend, FiTag, FiUser } from "react-icons/fi";
 import "./contact-form.scss";
 import { checkFormikField } from '../helpers/functions/forms';
@@ -71,6 +71,7 @@ const ContactForm = () => {
     });
 
   return (
+   
     <Form
     className="contact-form-container"
     noValidate
@@ -149,7 +150,11 @@ const ContactForm = () => {
             {loading ? <ButtonSpinner /> : <FiSend />} Send
         </Button>
 </Form>
-  )
+        
+                     
+                    
+                    
+  )        
 }
 
 export default ContactForm
