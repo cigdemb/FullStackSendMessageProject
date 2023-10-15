@@ -43,7 +43,6 @@ const ContactForm = () => {
             await fetch(`${API_URL}/contactMessages/save`,
             {
                 method: 'POST',
-                // mode: 'no-cors', // Set the mode to 'no-cors' to disable CORS
                 headers: {
                     'Content-Type': "application/json"
                 },
