@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, Col, Row } from 'react-bootstrap';
 
 const API_URL = "http://localhost:8085/app";
 
-const AllMessages = () => {
+const AllMessages = ({refreshKey}) => {
 
     const [messages, setMessages] = useState([]);
 
@@ -17,6 +17,13 @@ const AllMessages = () => {
         setMessages(data)      
     
     }
+
+    useEffect(()=>{
+        fetchAllMessages();
+      },[refreshKey])
+    
+      console.log(messages)
+    
   return (
     <div>
         <h3 style={{ textAlign: "center" }}>Messages</h3>
@@ -26,7 +33,7 @@ const AllMessages = () => {
             <Col md={6} lg={4} key={item.subject}>
                 
                     <Card>
-                        <Card.Body>{item.subject}</Card.Body>
+                        <Card.Body>Subject: {item.subject}</Card.Body>
                     </Card>
                 
             </Col>
